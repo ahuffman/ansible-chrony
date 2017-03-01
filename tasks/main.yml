@@ -1,6 +1,6 @@
 ---
 
-- name: Install the required  packages in Redhat derivatives
+- name: Install chrony
   yum: name={{ item }} state=latest
   with_items: '{{ chrony_pkgs }}'
 

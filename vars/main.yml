@@ -2,4 +2,4 @@
 chrony_pkgs:
   - chrony
 
-ntp_svc_name: chronyd
+chrony_svc_name: chronyd
