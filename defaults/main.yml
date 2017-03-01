@@ -1,11 +1,12 @@
 ---
 
 ntp_driftfile: /var/lib/ntp/drift
-ntp_server: [0.ubuntu.pool.ntp.org, 1.ubuntu.pool.ntp.org]
+ntp_server: [0.rhel.pool.ntp.org, 1.rhel.pool.ntp.org, 2.rhel.pool.ntp.org, 3.rhel.pool.ntp.org]
 ntp_restrict:
   - "restrict -4 default kod notrap nomodify nopeer noquery"
   - "restrict -6 default kod notrap nomodify nopeer noquery"
   - "restrict 127.0.0.1"
+  - "restrict ::1"
 
 ntp_crypto: no
 ntp_includefile: no

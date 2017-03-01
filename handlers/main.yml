@@ -1,5 +1,5 @@
 ---
 
-- name: restart ntp
-  service: name={{ ntp_svc_name }} state=restarted enabled=yes
+- name: Restart chronyd
+  service: name={{ chrony_svc_name }} state=restarted enabled=yes
 

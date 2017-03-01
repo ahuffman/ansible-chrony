@@ -1,7 +1,7 @@
-ntp
+ahuffman.chrony
 ===
 
-This role enables users to install and configure ntp on their hosts.
+This role enables users to install and configure chrony on their hosts.
 
 Requirements
 ------------
@@ -19,7 +19,7 @@ them are as follows. See the NTP configuration documentation for details:
 	ntp_driftfile: /var/lib/ntp/drifta
 
 	# The server to sync time with
-	ntp_server: [0.ubuntu.pool.ntp.org, 1.ubuntu.pool.ntp.org]
+	ntp_server: [0.rhel.pool.ntp.org, 1.rhel.pool.ntp.org, 2.rhel.pool.ntp.org, 3.rhel.pool.ntp.org]
 
 	ntp_restrict:                                                           
 	  - "restrict -4 default kod notrap nomodify nopeer noquery"
@@ -51,7 +51,7 @@ Examples
 	- hosts: all
 	  roles:
 	    - role: ntp
-	      ntp_server: [2.ubuntu.pool.ntp.org, 1.ubuntu.pool.ntp.org]
+	      ntp_server: [0.rhel.pool.ntp.org, 1.rhel.pool.ntp.org, 2.rhel.pool.ntp.org, 3.rhel.pool.ntp.org]
 
 Dependencies
 ------------
@@ -65,6 +65,5 @@ BSD
 
 Author Information
 ------------------
-
 Benno Joy
-
+Andrew J. Huffman

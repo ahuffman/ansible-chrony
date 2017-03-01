@@ -1,4 +1,5 @@
 ---
-env:
- RUNLEVEL: 1
+chrony_pkgs:
+  - chrony
 
+ntp_svc_name: chronyd
